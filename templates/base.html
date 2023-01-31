@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <style>
+        body {
+            width: 95%;
+            max-width: 1000px;
+            padding: 2.5vh 0;
+            margin: auto;
+        }
+
+        code {
+            margin: .5vh 0;
+            display: block;
+            white-space: pre-wrap;
+            padding: 1%;
+            background: black;
+            color: whitesmoke;
+        }
+
+        html {
+            font-family: 'Lato', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6, p {
+            padding: .5vh 0;
+        }
+
+        .menu-link {
+            margin-left: 1em;
+        }
+
+        .content {
+            padding: 0 5vw;
+            margin: auto;
+
+        }
+
+        .simple-menu {
+            padding: 2.5vh 0;
+            font-weight: 700;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .logo-column {
+            flex: 10%;
+        }
+
+        .menu-column {
+            text-align: right;
+            flex: 90%;
+        }
+    </style>
+</head>
+<body>
+<header class="row">
+    <section class="logo-column">
+        <img class="logo" src="../static/images/b.png" alt="bellone.com icon" width="70"/>
+    </section>
+    <section class="menu-column simple-menu">
+        <a href="/" class="menu-link">Home</a>
+        <a href="#" class="menu-link">About</a>
+        <a href="#" class="menu-link">Contact</a>
+        <a href="#" class="menu-link">Links</a>
+    </section>
+</header>
+<br>
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
