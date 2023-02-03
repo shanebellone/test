@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://shanebellone.com/sitemap.txt
