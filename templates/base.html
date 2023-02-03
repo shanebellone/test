@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+
+    <style>
+        @font-face {
+            font-family: 'Lato', sans-serif;
+            src: url("../static/font/lato/Lato-Regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+}
+        @font-face {
+            font-family: 'Lato', sans-serif;
+            src: url("../static/font/lato/Lato-Bold.ttf") format("truetype");
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Lato', sans-serif;
+            src: url("../static/font/lato/Lato-Italic.ttf") format("truetype");
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .article {
+            padding: 2vh 0;
+        }
+
+        body {
+            min-height: 101vh;
+            width: 95%;
+            max-width: 1000px;
+            padding: 2.5vh 0 5vh 0;
+            margin: auto;
+        }
+
+        code {
+            margin: .5vh 0;
+            display: block;
+            white-space: pre-wrap;
+            padding: 1%;
+            background: black;
+            color: whitesmoke;
+        }
+
+        .code-output {
+            margin: .5vh 0;
+            display: block;
+            white-space: pre-wrap;
+            padding: 1%;
+            background: gray;
+            color: whitesmoke;
+        }
+
+        html {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .menu-link {
+            margin-left: 1em;
+        }
+
+        .content {
+            padding: 0 5vw;
+            margin: auto;
+
+        }
+
+        .simple-menu {
+            padding: 2.5vh 0;
+            margin: 0 1vw;
+            font-weight: 700;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .logo-column {
+            flex: 10%;
+        }
+
+        .menu-column {
+            text-align: right;
+            flex: 90%;
+        }
+    </style>
+</head>
+<body>
+<header class="row">
+    <section class="logo-column">
+        <a href="/"><img class="logo" src="../static/images/b.png" alt="bellone.com icon" width="70"/></a>
+    </section>
+    <section class="menu-column simple-menu">
+        <a href="/" class="menu-link">Home</a>
+        <a href="/about" class="menu-link">About</a>
+        <a href="/links" class="menu-link">Links</a>
+    </section>
+</header>
+<br>
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
