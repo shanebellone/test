@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% block title %}Python: List{% endblock %}
+
+{% block content %}
+    <h1>Python: List</h1>
+    <p>
+        Python lists are data structures containing a group of elements within a single variable.
+        Elements are access by offset (position), slice (offset range), or iteration. The first element is positioned at
+        "index 0". You can loop through a list with a "for" and "in" construct. You can also check for an element by
+        value with an "if" and "in" construct.
+    </p>
+    <h3>List Methods</h3>
+    <figure>
+        <table>
+            <tbody>
+            <tr>
+                <td><strong>Method</strong></td>
+                <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+                <td>.append()</td>
+                <td>Adds an element to the end of the list</td>
+            </tr>
+            <tr>
+                <td>.clear()</td>
+                <td>Empties the list</td>
+            </tr>
+            <tr>
+                <td>.copy()</td>
+                <td>Returns a copy of the list</td>
+            </tr>
+            <tr>
+                <td>.count()</td>
+                <td>Returns a count from the specified value</td>
+            </tr>
+            <tr>
+                <td>.extend()</td>
+                <td>Adds an iterable to the end of the current list</td>
+            </tr>
+            <tr>
+                <td>.index()</td>
+                <td>Returns the index of the first element from a specified value</td>
+            </tr>
+            <tr>
+                <td>.insert()</td>
+                <td>Adds an element to a specified position</td>
+            </tr>
+            <tr>
+                <td>.pop()</td>
+                <td>Removes an element at a specified position</td>
+            </tr>
+            <tr>
+                <td>.remove()</td>
+                <td>Removes the first element with a specified value</td>
+            </tr>
+            <tr>
+                <td>.reverse()</td>
+                <td>Reverses the order of a list</td>
+            </tr>
+            <tr>
+                <td>.sort()</td>
+                <td>Sorts a list</td>
+            </tr>
+            </tbody>
+        </table>
+    </figure>
+    <h2>List Examples</h2>
+    <h4>Create an empty list with empty brackets.</h4>
+    <code>empty_list = &#91;]<br>print(empty_list)</code>
+    <code class="code-output">output: []</code>
+    <br>
+    <h4>Create an empty list with list() function.</h4>
+    <code>empty_list = list()<br>print(empty_list)</code>
+    <code class="code-output">output: []</code>
+    <br>
+    <h4>Create a list from a string (convert string to list).</h4>
+    <code>list_from_string = list('python')<br>print(list_from_string)</code>
+    <code class="code-output">output: ['p', 'y', 't', 'h', 'o', 'n']</code>
+    <br>
+    <h4>Create a list from a tuple (convert tuple to list).</h4>
+    <code>our_tuple = ('item 1', 'item 2', 'item 3')<br>list_from_tuple = list(our_tuple)<br>print(list_from_tuple)</code>
+    <code class="code-output">output: ['item 1', 'item 2', 'item 3']</code>
+    <br>
+    <h4>Select an element with offset.</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>print(our_list&#91;0])</code>
+    <code class="code-output">output: item 1</code>
+    <br>
+    <h4>Change (swap) an element with offset.</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3a']<br>our_list[2] = 'item 3b'<br>print(our_list)</code>
+    <code class="code-output">output: ['item 1', 'item 2', 'item 3b']</code>
+    <br>
+    <h4>Select a slice (range of elements) with an offset range.</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>print(our_list[:2])</code>
+    <code class="code-output">output: ['item 1', 'item 2']</code>
+    <br>
+    <h4>Combine (merge) lists with extend.</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>new_list = ['item 4', 'item 5']<br>our_list.extend(new_list)<br>print(our_list)</code>
+    <code class="code-output">output: ['item 1', 'item 2', 'item 3', 'item 4', 'item 5']</code>
+    <br>
+    <h4>Combine lists with "+=".</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>new_list = ['item 4', 'item 5']<br>our_list += new_list<br>print(our_list)</code>
+    <code class="code-output">output: ['item 1', 'item 2', 'item 3', 'item 4', 'item 5']</code>
+    <br>
+    <h4>Add an element with .append().</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>our_list.append('item 4')<br>print(our_list)</code>
+    <code class="code-output">output: ['item 1', 'item 2', 'item 3', 'item 4']</code>
+    <br>
+    <h4>Remove an element with offset with del.</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>del our_list[1]<br>print(our_list)</code>
+    <code class="code-output">output: ['item 1', 'item 3']</code>
+    <br>
+    <h4>Remove an element by value with remove().</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>our_list.remove('item 3')<br>print(our_list)</code>
+    <code class="code-output">output: ['item 1', 'item 2']</code>
+    <br>
+    <h4>Return and remove by specified offset with pop().</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>element = our_list.pop(1)<br>print(element)</code>
+    <code class="code-output">output: item 2</code>
+    <br>
+    <h4>Empty a list with clear().</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>our_list.clear()<br>print(our_list)</code>
+    <code class="code-output">output: []</code>
+    <br>
+    <h4>Copy a list.</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>new_list = our_list.copy()<br>print(new_list)</code>
+    <code class="code-output">output: ['item 1', 'item 2', 'item 3']</code>
+    <br>
+    <h4>Return a count of a specified element in list.</h4>
+    <code>our_list = ['item 1', 'item 1', 'item 3']<br>print(our_list.count('item 1'))</code>
+    <code class="code-output">output: 2</code>
+    <br>
+    <h4>Return the index of a specified element.</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>print(our_list.index('item 1'))</code>
+    <code class="code-output">output: 0</code>
+    <br>
+    <h4>Reverse the elements of a list.</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>our_list.reverse()<br>print(our_list)</code>
+    <code class="code-output">output: ['item 3', 'item 2', 'item 1']</code>
+    <br>
+    <h4>Sort the elements of a list.</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>our_list.reverse()<br>our_list.sort()<br>print(our_list)</code>
+    <code class="code-output">output: ['item 1', 'item 2', 'item 3']</code>
+    <br>
+    <h4>Find (check) value in list with "if" and "in" construct.</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>if 'item 1' in our_list:
+    print("Found")</code>
+    <code class="code-output">output: Found</code>
+    <br>
+    <h4>Loop through list with "for" and "in" construct.</h4>
+    <code>our_list = ['item 1', 'item 2', 'item 3']<br>for element in our_list:
+        print(element)</code>
+    <code class="code-output">output: item 1<br>item 2<br>item 3</code>
+{% endblock %}
