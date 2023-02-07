@@ -1,0 +1,8 @@
+https://shanebellone.com/about
+https://shanebellone.com/deploy-flask-on-nginx-w-uwsgi
+https://shanebellone.com/index
+https://shanebellone.com/links
+https://shanebellone.com/python-comprehensions
+https://shanebellone.com/python-dictionary
+https://shanebellone.com/python-enforce-type-hints
+https://shanebellone.com/python-list
